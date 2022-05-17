@@ -37,9 +37,6 @@ class JobsPage extends PageBase{
         SearchEl.click(); 
         WebElement searchBarElement = this.waitAndReturnElement(searchLocator);
         searchBarElement.sendKeys("Morgan Stanley\n");
-        // getting page title
-        // WebElement body= BaseClass.waitVisibiiltyAndFindElement(bodyLocator);
-        // System.out.println("**************** Page title is : " + BaseClass.driver.getTitle()+ " **********************");
 
         // applying student status filter through a radio button
         WebElement StudentSt = this.waitAndReturnElement(StudentStatus);

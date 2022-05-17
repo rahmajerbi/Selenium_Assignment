@@ -25,7 +25,6 @@ class EditProfile extends PageBase{
         
         private  By EP=By.xpath(("//*[@id='app']/div[1]/div/div/div[3]/div[1]/div[2]/div[3]/a")); 
         private WebDriverWait wait;
-        //private By DownloadB = By.xpath("//*[@id='app']/div[1]/div/div/div[2]/div[2]/div[2]/div[1]/a[1]");
         private  By skillsS=By.xpath("//*[@id='app']/div[1]/div/div/div[3]/div[2]/div[1]/h3[2]/a");   
         private By bodyLocator = By.tagName("body");
         // drop down button to perform logout 
@@ -44,8 +43,6 @@ class EditProfile extends PageBase{
         js.executeScript("arguments[0].scrollIntoView();",skills);
         skills.click();
         try{Thread.sleep(2000); } catch(Exception e){System.out.println(e); }
-        //this.waitAndReturnElement(By.xpath("//*[@id='modals-container']/div/div/div[2]/div/div[2]/form/div[1]/div[1]/div/div/div[2]/div");
-       // this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='modals-container']/div/div/div[2]/div/div[2]/form/div[1]/div[1]/div/div/div[2]/div")));
         driver.findElement(By.xpath("//*[@id='modals-container']/div/div/div[2]/div/div[2]/form/div[1]/div[1]/div/div/div[2]/div/div[2]")).click();
         
 
