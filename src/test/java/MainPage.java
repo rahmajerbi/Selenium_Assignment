@@ -34,6 +34,11 @@ class MainPage extends PageBase{
         return new LoginPage(this.driver);
     }
 
+    public String LoginTestLink(){         
+        String LoginUrl= driver.getCurrentUrl();
+        System.out.println(LoginUrl);
+        return LoginUrl;
+    }
 
 
 }

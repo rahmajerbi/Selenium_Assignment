@@ -21,10 +21,11 @@ class JobsPage extends PageBase{
     private By search= By.xpath("//*[@id='app']/div[1]/div/div[1]/div[2]/div/div/div[1]/div[1]");
     private   By StudentStatus = By.xpath("//*[@id='app']/div[1]/div/div[1]/div[2]/div/div/div[1]/div[8]/a");
     private  By languages = By.xpath("//*[@id='app']/div[1]/div/div[1]/div[2]/div/div/div[1]/div[7]/a");
-    private final  By DD=By.xpath("//*[@id='user_navbar']/div/div[2]/div[2]/span/a[2]");
-    private final  By EP=By.xpath(("//*[@id='app']/div[1]/div/div/div[1]/div[2]/a"));
-    private final By searchLocator = By.xpath("//*[@id='search']");
-
+    private   By DD=By.xpath("//*[@id='user_navbar']/div/div[2]/div[2]/span/a[2]");
+    private   By EP=By.xpath(("//*[@id='app']/div[1]/div/div/div[1]/div[2]/a"));
+    private  By searchLocator = By.xpath("//*[@id='search']");
+    private By bodyLocator = By.tagName("body");
+    private  By skillsS=By.xpath("//*[@id='app']/div[1]/div/div/div[3]/div[2]/div[1]/h3[2]/a/svg/path");   
     public JobsPage(WebDriver driver){
         super(driver);
     }
@@ -71,6 +72,8 @@ class JobsPage extends PageBase{
         //Chooose edit profile option
         WebElement profileE = this.waitAndReturnElement(By.xpath("//*[@id='user_navbar']/div/div[2]/div[2]/ul/li[1]/a"));	
         profileE.click();
+        try{Thread.sleep(2000); } catch(Exception e){System.out.println(e); }
+        WebElement body= waitAndReturnElement(bodyLocator);
         return new EditProfile(this.driver);
     }
 

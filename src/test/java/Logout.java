@@ -13,6 +13,8 @@ class Logout extends PageBase{
 
     }
 
+   
+
     public MainPage logout(){
         
 
@@ -20,6 +22,11 @@ class Logout extends PageBase{
 
     }
 
+    public String lougoutLink(){
+        String expectedUrl= driver.getCurrentUrl();
+        System.out.println(expectedUrl);
+        return expectedUrl;
+    }
 
 
 

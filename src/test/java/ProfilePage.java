@@ -21,6 +21,7 @@ class ProfilePage extends PageBase{
     }
 
     public String getMainCardTitle(){         
+        //System.out.println(this.waitAndReturnElement(profile).getText());
         return this.waitAndReturnElement(profile).getText();
     }
 
